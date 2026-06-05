@@ -1,6 +1,32 @@
 # @surihoney/priority-queue
 
+[![npm version](https://img.shields.io/npm/v/@surihoney/priority-queue.svg)](https://www.npmjs.com/package/@surihoney/priority-queue)
+
+
 A small TypeScript library for ordering items in a **priority queue** — a waiting line where more important items go first, but everyone still gets a fair turn within their group.
+
+## Install
+
+Published on npm: [@surihoney/priority-queue](https://www.npmjs.com/package/@surihoney/priority-queue)
+
+```bash
+npm install @surihoney/priority-queue
+```
+
+Or with another package manager:
+
+```bash
+yarn add @surihoney/priority-queue
+pnpm add @surihoney/priority-queue
+```
+
+Then import in your project:
+
+```typescript
+import { insertItem, reinsertItem, PriorityRank } from '@surihoney/priority-queue';
+```
+
+No extra setup required — TypeScript types are included.
 
 ## What is a priority queue?
 
@@ -48,12 +74,6 @@ queue = insertIdentifiedItem(queue, { id: 2, priority: PriorityRank.normal });
 // A VIP arrives — they go to the front
 queue = insertIdentifiedItem(queue, { id: 3, priority: PriorityRank.high });
 // queue: [3, 1, 2]  → VIP first, then normal customers in order
-```
-
-## Install
-
-```bash
-npm install @surihoney/priority-queue
 ```
 
 ## Custom items
